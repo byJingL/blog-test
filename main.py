@@ -13,6 +13,7 @@ from sqlalchemy.orm import relationship
 # using of avatar photo
 from flask_gravatar import Gravatar
 import os
+import psycopg2
 
 today = datetime.datetime.now().strftime("%B %d,%Y")
 
