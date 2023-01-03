@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/flask,pycharm
-# Edit at https://www.toptal.com/developers/gitignore?templates=flask,pycharm
+# Created by https://www.toptal.com/developers/gitignore/api/pycharm,flask
+# Edit at https://www.toptal.com/developers/gitignore?templates=pycharm,flask
 
 ### Flask ###
 instance/*
@@ -280,4 +280,4 @@ fabric.properties
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
 
-# End of https://www.toptal.com/developers/gitignore/api/flask,pycharm
+# End of https://www.toptal.com/developers/gitignore/api/pycharm,flask
