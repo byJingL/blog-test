@@ -35,14 +35,20 @@ def load_user(user_id):
 
 
 # ------------------ Create DB------------------#
-# Debugging issue between heroku and postgres
-# uri = os.getenv("DATABASE_URL")  # or other relevant config var
-# if uri.startswith("postgres://"):
-#     uri = uri.replace("postgres://", "postgresql://", 1)
+# ----- postgres -----#
+# Debugging issue between render and postgres
+uri = os.getenv("DATABASE_URL")  # or other relevant config var
+if uri.startswith("postgres://"):
+    uri = uri.replace("postgres://", "postgresql://", 1)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///posts.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
+# ----- SQLite -----#
+# app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///posts.db"
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# db = SQLAlchemy(app)
 
 
 # Configure table / Relationship database
